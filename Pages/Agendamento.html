@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="../Style/styleAgendamento.css" rel="stylesheet">
+  <script src="../JS/Script.JS"></script>
+  <title>Agendamento</title>
+</head>
+
+<body class="body">
+  <nav class="navbar navbar-expand-lg " id="Nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="Link" href="../Pages/Index.html"><img src="../Assets/logo1.png" alt=""
+          id="imgLogo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav" id="NavLink">
+          <a class="nav-link active" id="Link" aria-current="page" href="Index.html">Home</a>
+          <a class="nav-link active" id="Link" href="Servico.html">Serviços</a>
+          <a class="nav-link active" id="Link" href="#faleconosco">Fale Conosco</a>
+        </div>
+        <a class="navbar-brand" id="Link" href="../Pages/Login.html"><img src="../Assets/login.png" alt=""
+            id="imgLogin"></a>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  
+  <div class="card" id="card">
+    <div class="card-body">
+      <h2 id="Title1">Agende seu Serviço</h2>
+      <div class="container overflow-hidden text-center">
+        <div class="row gx-5">
+          <div class="col">
+            <div class="p-3">
+              <form class="row g-3 needs-validation" id="Form">
+                <div class="col-md-6" id="label">
+                  <label for="nome" class="form-label">Data</label>
+                  <input type="date" class="form-control" name="data" id="data" min="" required>
+                  <br>
+                  <label for="cpf" class="form-label">Horas</label>
+                  <input type="time" class="form-control" name="time" id="time" min="8:00" max="17:00" required>
+                  <br>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3">
+              <div class="card" id="Form2">
+                <h5 class="card-header" id="header">Carrinho</h5>
+                <div class="card-body">
+                  <p>- <span id="text"></span></p>
+                  <p>- <span id="preco"></span></p>
+                  <a href="FormaPagamento.html" class="btn btn-primary" id="btn3">Continuar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <script>
+    var paragrafo = document.querySelector("#text");
+    paragrafo.textContent = localStorage.getItem('valueText');
+    var valor = document.querySelector("#preco");
+    valor.textContent = localStorage.getItem('valuePreco');
+    /*
+    var paragrafo2 = document.querySelector("#text");
+    paragrafo2.textContent = localStorage.getItem('valueText');
+    var valor2 = document.querySelector("#preco");
+    valor2.textContent = localStorage.getItem('valuePreco');
+
+    var paragrafo3 = document.querySelector("#text3");
+    paragrafo3.textContent = localStorage.getItem('valueText');
+    var valor3 = document.querySelector("#preco3");
+    valor3.textContent = localStorage.getItem('valuePreco');
+    
+    var paragrafo4 = document.querySelector("#text4");
+    paragrafo4.textContent = localStorage.getItem('valueText4');
+    var valor4 = document.querySelector("#preco4");
+    valor4.textContent = localStorage.getItem('valuePreco4');
+    
+    var paragrafo5 = document.querySelector("#text5");
+    paragrafo5.textContent = localStorage.getItem('valueText5');
+    var valor5 = document.querySelector("#preco5");
+    valor5.textContent = localStorage.getItem('valuePreco5');
+    
+    var paragrafo6 = document.querySelector("#text6");
+    paragrafo6.textContent = localStorage.getItem('valueText6');
+    var valor6 = document.querySelector("#preco6");
+    valor6.textContent = localStorage.getItem('valuePreco6');
+    */
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
